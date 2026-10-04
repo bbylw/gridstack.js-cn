@@ -5,8 +5,6 @@ import { Footer } from './components/Footer'
 import { Frameworks } from './components/Frameworks'
 import { Hero } from './components/Hero'
 import { Install } from './components/Install'
-import { JQuery } from './components/JQuery'
-import { Migrations } from './components/Migrations'
 import { Navbar } from './components/Navbar'
 import { Playground } from './components/Playground'
 import { Usage } from './components/Usage'
@@ -29,8 +27,6 @@ export default function App() {
         <Playground />
         <Frameworks />
         <Advanced />
-        <Migrations />
-        <JQuery />
         <Closing />
       </main>
       <Footer />

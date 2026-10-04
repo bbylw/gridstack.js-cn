@@ -7,7 +7,6 @@ const LINKS = [
   { href: '#playground', label: '演示' },
   { href: '#frameworks', label: '框架' },
   { href: '#advanced', label: '进阶' },
-  { href: '#migrating', label: '迁移' },
 ]
 
 const GITHUB = 'https://github.com/gridstack/gridstack.js'

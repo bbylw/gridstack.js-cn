@@ -156,22 +156,4 @@ GridStack.registerEngine(CustomEngine); // 全局设置我们的自定义类`,
 };
 GridStack.init(options);`,
   },
-
-  jqueryImport: {
-    lang: 'js',
-    code: `import 'gridstack/dist/gridstack.min.css';
-import { GridStack } from 'gridstack';
-import 'gridstack/dist/jq/gridstack-dd-jqueryui';`,
-  },
-
-  jqueryAlias: {
-    lang: 'js',
-    code: `// webpack 或等效配置
-alias: {
-  'jquery': 'gridstack/dist/jq/jquery.js',
-  'jquery-ui': 'gridstack/dist/jq/jquery-ui.js',
-  'jquery.ui': 'gridstack/dist/jq/jquery-ui.js',
-  'jquery.ui.touch-punch': 'gridstack/dist/jq/jquery.ui.touch-punch.js',
-},`,
-  },
 } satisfies Record<string, Snippet>

@@ -28,7 +28,6 @@ const COLUMNS = [
     links: [
       { label: 'GitHub', href: 'https://github.com/gridstack/gridstack.js' },
       { label: 'NPM 包', href: 'https://www.npmjs.com/package/gridstack' },
-      { label: '迁移指南', href: '#migrating' },
       {
         label: '贡献者',
         href: 'https://github.com/gridstack/gridstack.js/graphs/contributors',
