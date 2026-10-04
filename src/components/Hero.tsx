@@ -26,11 +26,11 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute -top-40 -right-32 size-[520px] rounded-full bg-accent/20 blur-[130px]"
+        className="absolute -top-40 -right-32 size-130 rounded-full bg-accent/20 blur-[130px]"
       />
       <div
         aria-hidden="true"
-        className="absolute -bottom-32 -left-24 size-[420px] rounded-full bg-blue/12 blur-[120px]"
+        className="absolute -bottom-32 -left-24 size-105 rounded-full bg-blue/12 blur-[120px]"
       />
 
       <div className="relative mx-auto grid w-full max-w-300 items-center gap-14 px-5 pt-10 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
@@ -206,7 +206,7 @@ const MockDashboard = memo(function MockDashboard() {
               {[40, 65, 48, 82, 58, 95, 70, 88, 54, 76, 62, 90].map((h, i) => (
                 <span
                   key={i}
-                  className="flex-1 origin-bottom rounded-t-[2px] bg-linear-to-t from-accent/40 to-accent"
+                  className="flex-1 origin-bottom rounded-t-xs bg-linear-to-t from-accent/40 to-accent"
                   style={{
                     height: `${h}%`,
                     animation: `bar-rise 0.8s cubic-bezier(0.16,1,0.3,1) ${
