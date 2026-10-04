@@ -191,7 +191,7 @@ export function Advanced() {
               {['pageBreak', 'orientation', 'breakInside'].map((k) => (
                 <li
                   key={k}
-                  className="flex items-center justify-between rounded-md border border-subtle bg-white px-3 py-2"
+                  className="flex items-center justify-between rounded-md border border-subtle bg-white/70 px-3 py-2"
                 >
                   <span>{k}</span>
                   <span className="text-green">✓</span>

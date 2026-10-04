@@ -172,13 +172,13 @@ function DependencyVisual() {
         BEFORE → AFTER
       </p>
       <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
-        <span className="rounded-md border border-subtle bg-white px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
           lodash
         </span>
-        <span className="rounded-md border border-subtle bg-white px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
           jquery
         </span>
-        <span className="rounded-md border border-subtle bg-white px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
           jquery-ui
         </span>
         <span className="text-mid">→</span>

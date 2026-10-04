@@ -108,7 +108,7 @@ export function Closing() {
             href="https://www.paypal.me/alaind831"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-subtle bg-white px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
+            className="rounded-lg border border-subtle bg-white/70 px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
           >
             PayPal 捐赠
           </a>
@@ -116,7 +116,7 @@ export function Closing() {
             href="https://www.venmo.com/adumesny"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-subtle bg-white px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
+            className="rounded-lg border border-subtle bg-white/70 px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
           >
             Venmo 捐赠
           </a>
