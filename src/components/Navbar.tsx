@@ -71,10 +71,6 @@ export function Navbar() {
             </span>
           </a>
 
-          <span className="hidden rounded-full border border-white/15 px-2 py-0.5 font-mono text-[10px] tracking-widest text-mid sm:inline-block">
-            中文文档
-          </span>
-
           <ul className="ml-auto hidden items-center gap-1 lg:flex">
             {LINKS.map((link) => (
               <li key={link.href}>
