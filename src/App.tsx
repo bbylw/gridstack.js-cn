@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Advanced } from './components/Advanced'
 import { Closing } from './components/Closing'
 import { Features } from './components/Features'
@@ -6,8 +7,32 @@ import { Frameworks } from './components/Frameworks'
 import { Hero } from './components/Hero'
 import { Install } from './components/Install'
 import { Navbar } from './components/Navbar'
-import { Playground } from './components/Playground'
+import { Section, SectionHeading } from './components/Section'
 import { Usage } from './components/Usage'
+
+const Playground = lazy(() =>
+  import('./components/Playground').then((m) => ({ default: m.Playground })),
+)
+
+function PlaygroundSkeleton() {
+  return (
+    <Section id="playground" dark>
+      <div className="grain pointer-events-none absolute inset-0" />
+      <div className="relative">
+        <SectionHeading
+          dark
+          eyebrow="Playground"
+          title="别只看代码，直接上手玩"
+          lead="下面是一个真实的 gridstack.js 实例——不是录屏，也不是静态图。拖动卡片移动位置、拉右下角缩放、从左侧面板拖入新部件、把卡片拖到垃圾桶删除，右侧 JSON 会实时跟着变。"
+        />
+        <div className="flex min-h-[480px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 font-mono text-sm text-mid">
+          <span className="animate-pulse-dot mr-2.5 size-2 rounded-full bg-accent" />
+          正在加载网格交互环境…
+        </div>
+      </div>
+    </Section>
+  )
+}
 
 export default function App() {
   return (
@@ -24,7 +49,9 @@ export default function App() {
         <Features />
         <Install />
         <Usage />
-        <Playground />
+        <Suspense fallback={<PlaygroundSkeleton />}>
+          <Playground />
+        </Suspense>
         <Frameworks />
         <Advanced />
         <Closing />

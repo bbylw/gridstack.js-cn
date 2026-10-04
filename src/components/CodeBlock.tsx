@@ -67,7 +67,7 @@ export function CodeBlock({ code, lang, filename }: CodeBlockProps) {
   return (
     <figure
       ref={ref}
-      className="group relative my-0 overflow-hidden rounded-xl border border-ink-line bg-ink text-paper"
+      className="group relative my-0 max-w-full min-w-0 overflow-hidden rounded-xl border border-ink-line bg-ink text-paper"
     >
       <figcaption className="flex items-center gap-3 border-b border-ink-line/80 bg-ink-soft px-4 py-2.5">
         <span className="flex gap-1.5" aria-hidden="true">

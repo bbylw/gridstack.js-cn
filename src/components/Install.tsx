@@ -52,13 +52,13 @@ export function Install() {
           lead="用包管理器安装，然后按你使用的构建方式引入。整个库由一份 JS 与一份 CSS 组成。"
         />
 
-        <div className="grid gap-10 lg:grid-cols-2">
-          <Reveal>
+        <div className="grid min-w-0 gap-10 lg:grid-cols-2">
+          <Reveal className="min-w-0">
             <div className="mb-4 flex items-baseline gap-3">
               <span className="font-mono text-xs text-accent">01</span>
               <h3 className="text-xl font-semibold text-paper">安装</h3>
             </div>
-            <Tabs items={PACKAGE_TABS} ariaLabel="包管理器" />
+            <Tabs items={PACKAGE_TABS} ariaLabel="包管理器" dark />
 
             <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-5">
               <p className="font-mono text-[11px] tracking-widest text-accent">
@@ -80,7 +80,7 @@ export function Install() {
               <span className="font-mono text-xs text-accent">02</span>
               <h3 className="text-xl font-semibold text-paper">引入</h3>
             </div>
-            <Tabs items={IMPORT_TABS} ariaLabel="引入方式" />
+            <Tabs items={IMPORT_TABS} ariaLabel="引入方式" dark />
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a

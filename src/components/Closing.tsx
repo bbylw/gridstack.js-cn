@@ -57,7 +57,7 @@ export function Closing() {
               rel="noreferrer"
               className="group flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-diffuse"
             >
-              <span className="font-mono text-[11px] tracking-widest text-accent">
+              <span className="font-mono text-[11px] tracking-widest text-accent-deep">
                 {l.label}
               </span>
               <h3 className="mt-2 text-xl font-semibold text-ink">{l.title}</h3>
@@ -80,7 +80,7 @@ export function Closing() {
               key={m.name}
               className="rounded-2xl border border-subtle bg-white/70 p-6"
             >
-              <p className="font-mono text-[10px] tracking-widest text-accent">
+              <p className="font-mono text-[10px] tracking-widest text-accent-deep">
                 {m.role}
               </p>
               <a

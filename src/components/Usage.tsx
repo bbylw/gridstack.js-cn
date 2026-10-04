@@ -49,8 +49,8 @@ export function Usage() {
         lead="你可以动态创建部件、载入序列化数据，或直接写 DOM。三种方式可以自由混合。"
       />
 
-      <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        <Reveal>
+      <div className="grid min-w-0 gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <Reveal className="min-w-0">
           <ol className="divide-y divide-subtle border-y border-subtle">
             {POINTS.map((p) => (
               <li key={p.n} className="flex gap-5 py-6">
@@ -78,7 +78,7 @@ export function Usage() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.08}>
+        <Reveal delay={0.08} className="min-w-0">
           <Tabs items={USAGE_TABS} ariaLabel="创建方式" />
         </Reveal>
       </div>

@@ -36,11 +36,11 @@ export function Advanced() {
         lead="扩展原型、替换布局引擎、调整列数、覆盖手势选项——核心库都为这些场景留好了接口。"
       />
 
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid min-w-0 gap-3 lg:grid-cols-2">
         {/* 扩展库 */}
         <Reveal>
-          <article className="flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6">
-            <span className="font-mono text-[11px] tracking-widest text-accent">
+          <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+            <span className="font-mono text-[11px] tracking-widest text-accent-deep">
               扩展库
             </span>
             <h3 className="mt-2 text-xl font-semibold text-ink">
@@ -49,16 +49,16 @@ export function Advanced() {
             <p className="mt-2 text-sm leading-relaxed text-mid-dark">
               GridStack 的实例方法挂在原型上，你可以用一行代码扩展或修补它。
             </p>
-            <div className="mt-5">
+            <div className="mt-5 min-w-0">
               <CodeBlock {...snippets.extendLibrary} />
             </div>
           </article>
         </Reveal>
 
         {/* 覆盖选项 + 触摸 */}
-        <div className="grid gap-3">
+        <div className="grid min-w-0 gap-3">
           <Reveal delay={0.06}>
-            <article className="flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
               <span className="font-mono text-[11px] tracking-widest text-blue">
                 覆盖选项
               </span>
@@ -68,14 +68,14 @@ export function Advanced() {
               <p className="mt-2 text-sm leading-relaxed text-mid-dark">
                 默认的 resizable / draggable 选项都可以被覆盖。例如启用除右下角以外的缩放手柄：
               </p>
-              <div className="mt-5">
+              <div className="mt-5 min-w-0">
                 <CodeBlock {...snippets.overrideOptions} />
               </div>
             </article>
           </Reveal>
 
           <Reveal delay={0.12}>
-            <article className="flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
               <span className="font-mono text-[11px] tracking-widest text-green">
                 触摸设备
               </span>
@@ -86,7 +86,7 @@ export function Advanced() {
                 v6+ 通过原生触摸事件（连同鼠标事件）实现拖拽与缩放，无需
                 touch punch。
               </p>
-              <div className="mt-5">
+              <div className="mt-5 min-w-0">
                 <CodeBlock {...snippets.touch} />
               </div>
             </article>
@@ -96,12 +96,12 @@ export function Advanced() {
 
       {/* 扩展引擎 — full width, dark inset */}
       <Reveal className="mt-3">
-        <article className="relative overflow-hidden rounded-2xl bg-ink p-6 text-paper sm:p-8">
+        <article className="relative min-w-0 overflow-hidden rounded-2xl bg-ink p-6 text-paper sm:p-8">
           <div
             aria-hidden="true"
             className="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-60"
           />
-          <div className="relative grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div className="relative grid min-w-0 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
               <span className="font-mono text-[11px] tracking-widest text-accent">
                 扩展引擎 · 5.1+
@@ -117,17 +117,19 @@ export function Advanced() {
                 全局注册，即可彻底改变布局行为。
               </p>
             </div>
-            <CodeBlock {...snippets.extendEngine} />
+            <div className="min-w-0">
+              <CodeBlock {...snippets.extendEngine} />
+            </div>
           </div>
         </article>
       </Reveal>
 
       {/* 修改网格列数 — full width */}
       <Reveal className="mt-3">
-        <article className="rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <article className="min-w-0 rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8">
+          <div className="grid min-w-0 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <span className="font-mono text-[11px] tracking-widest text-accent">
+              <span className="font-mono text-[11px] tracking-widest text-accent-deep">
                 修改网格列数
               </span>
               <h3 className="mt-2 text-2xl font-semibold text-ink">
@@ -152,14 +154,16 @@ export function Advanced() {
                 </p>
               </div>
             </div>
-            <Tabs items={COLUMN_TABS} ariaLabel="列数配置" />
+            <div className="min-w-0">
+              <Tabs items={COLUMN_TABS} ariaLabel="列数配置" />
+            </div>
           </div>
         </article>
       </Reveal>
 
       {/* 打印支持 */}
       <Reveal className="mt-3">
-        <article className="grid gap-6 rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <article className="grid min-w-0 gap-6 rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <span className="font-mono text-[11px] tracking-widest text-blue">
               打印支持 · v13.1+

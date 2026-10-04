@@ -15,9 +15,10 @@ export interface TabItem {
 interface TabsProps {
   items: TabItem[]
   ariaLabel: string
+  dark?: boolean
 }
 
-export function Tabs({ items, ariaLabel }: TabsProps) {
+export function Tabs({ items, ariaLabel, dark = false }: TabsProps) {
   const [active, setActive] = useState(items[0]?.id)
   const baseId = useId()
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({})
@@ -60,7 +61,9 @@ export function Tabs({ items, ariaLabel }: TabsProps) {
       <div
         role="tablist"
         aria-label={ariaLabel}
-        className="flex flex-wrap gap-1.5 border-b border-subtle pb-px"
+        className={`flex flex-wrap gap-1.5 border-b pb-px ${
+          dark ? 'border-white/12' : 'border-subtle'
+        }`}
       >
         {items.map((item, i) => {
           const selected = item.id === active
@@ -80,8 +83,12 @@ export function Tabs({ items, ariaLabel }: TabsProps) {
               onKeyDown={(e) => onKeyDown(e, i)}
               className={`relative rounded-t-md px-3.5 py-2 font-mono text-xs transition-colors duration-200 ${
                 selected
-                  ? 'text-ink'
-                  : 'text-mid-dark hover:text-ink'
+                  ? dark
+                    ? 'text-paper'
+                    : 'text-ink'
+                  : dark
+                    ? 'text-mid hover:text-paper'
+                    : 'text-mid-dark hover:text-ink'
               }`}
             >
               {item.label}
