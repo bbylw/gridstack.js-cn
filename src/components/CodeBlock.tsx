@@ -90,7 +90,7 @@ export function CodeBlock({ code, lang, filename }: CodeBlockProps) {
       <div className="scroll-slim overflow-x-auto text-[13px] leading-[1.7]">
         {html ? (
           <div
-            className="shiki-host [&_pre]:!bg-transparent [&_pre]:m-0 [&_pre]:p-4 [&_code]:font-mono"
+            className="shiki-host [&_pre]:bg-transparent! [&_pre]:m-0 [&_pre]:p-4 [&_code]:font-mono"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         ) : (

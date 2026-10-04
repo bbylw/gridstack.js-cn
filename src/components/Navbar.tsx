@@ -58,7 +58,7 @@ export function Navbar() {
       <div className="border-b border-white/10 bg-ink/85 text-paper backdrop-blur-xl">
         <nav
           aria-label="主导航"
-          className="mx-auto flex h-16 w-full max-w-[1200px] items-center gap-3 px-5 sm:px-8"
+          className="mx-auto flex h-16 w-full max-w-300 items-center gap-3 px-5 sm:px-8"
         >
           <a
             href="#top"
@@ -145,11 +145,11 @@ export function Navbar() {
         // without it the invisible links stay keyboard-focusable.
         inert={!open}
         aria-hidden={!open}
-        className={`overflow-hidden border-b border-white/10 bg-ink text-paper transition-[max-height,opacity] duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
+        className={`overflow-hidden border-b border-white/10 bg-ink text-paper transition-[max-height,opacity] duration-400 ease-out-expo lg:hidden ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <ul className="mx-auto grid w-full max-w-[1200px] gap-1 px-5 py-4 sm:px-8">
+        <ul className="mx-auto grid w-full max-w-300 gap-1 px-5 py-4 sm:px-8">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a

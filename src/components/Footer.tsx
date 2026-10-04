@@ -43,7 +43,7 @@ export function Footer() {
         aria-hidden="true"
         className="bg-blueprint-dark pointer-events-none absolute inset-0 opacity-50"
       />
-      <div className="relative mx-auto w-full max-w-[1200px]">
+      <div className="relative mx-auto w-full max-w-300">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">

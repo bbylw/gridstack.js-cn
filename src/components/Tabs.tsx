@@ -94,7 +94,7 @@ export function Tabs({ items, ariaLabel, dark = false }: TabsProps) {
               {item.label}
               <span
                 aria-hidden="true"
-                className={`absolute inset-x-2 -bottom-px h-0.5 rounded-full transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`absolute inset-x-2 -bottom-px h-0.5 rounded-full transition-transform duration-300 ease-out-expo ${
                   selected ? 'scale-x-100 bg-accent' : 'scale-x-0 bg-transparent'
                 }`}
               />

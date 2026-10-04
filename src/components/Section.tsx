@@ -16,7 +16,7 @@ export function Section({ id, children, className = '', dark }: SectionProps) {
         dark ? 'bg-ink text-paper' : ''
       } ${className}`}
     >
-      <div className="mx-auto w-full max-w-[1200px]">{children}</div>
+      <div className="mx-auto w-full max-w-300">{children}</div>
     </section>
   )
 }

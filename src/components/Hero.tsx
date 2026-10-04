@@ -33,7 +33,7 @@ export function Hero() {
         className="absolute -bottom-32 -left-24 size-[420px] rounded-full bg-blue/12 blur-[120px]"
       />
 
-      <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-14 px-5 pt-10 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+      <div className="relative mx-auto grid w-full max-w-300 items-center gap-14 px-5 pt-10 pb-20 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
         {/* ---- copy ---- */}
         <div>
           <motion.div

@@ -136,7 +136,7 @@ export function Features() {
             <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-subtle bg-paper-dim p-6 transition-colors duration-300 hover:border-mid/60">
               <span
                 aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
+                className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 ease-out-expo group-hover:scale-x-100"
               />
               <h3
                 className={`text-lg font-semibold tracking-tight text-ink ${
