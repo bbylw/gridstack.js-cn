@@ -61,7 +61,7 @@ export function Frameworks() {
                 href={f.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-diffuse"
+                className="group flex h-full flex-col rounded-2xl border border-subtle bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-diffuse"
               >
                 <div className="flex items-center gap-2">
                   <span className="size-2 rounded-sm bg-accent" />
@@ -97,7 +97,7 @@ export function Frameworks() {
                   href={c.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block rounded-full border border-subtle bg-white/70 px-4 py-2 font-mono text-xs text-ink transition-colors duration-200 hover:border-accent hover:text-accent-deep"
+                  className="inline-block rounded-full border border-subtle bg-paper px-4 py-2 font-mono text-xs text-ink transition-colors duration-200 hover:border-accent hover:text-accent-deep"
                 >
                   {c.name} ↗
                 </a>

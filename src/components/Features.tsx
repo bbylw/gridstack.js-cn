@@ -133,7 +133,7 @@ export function Features() {
             delay={(i % 3) * 0.06}
             className={f.span}
           >
-            <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-subtle bg-white/70 p-6 transition-colors duration-300 hover:border-mid/60">
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-subtle bg-paper-dim p-6 transition-colors duration-300 hover:border-mid/60">
               <span
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-accent transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100"
@@ -167,18 +167,18 @@ export function Features() {
 /** Small "dependencies → none" illustration for the hero feature card. */
 function DependencyVisual() {
   return (
-    <div className="mt-auto rounded-xl border border-subtle bg-paper-dim p-4">
+    <div className="mt-auto rounded-xl border border-subtle bg-paper p-4">
       <p className="mb-3 font-mono text-[10px] tracking-widest text-mid-dark">
         BEFORE → AFTER
       </p>
       <div className="flex flex-wrap items-center gap-2 font-mono text-[11px]">
-        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-paper-dim px-2 py-1 text-mid-dark line-through">
           lodash
         </span>
-        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-paper-dim px-2 py-1 text-mid-dark line-through">
           jquery
         </span>
-        <span className="rounded-md border border-subtle bg-white/70 px-2 py-1 text-mid-dark line-through">
+        <span className="rounded-md border border-subtle bg-paper-dim px-2 py-1 text-mid-dark line-through">
           jquery-ui
         </span>
         <span className="text-mid">→</span>

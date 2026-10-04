@@ -55,7 +55,7 @@ export function Closing() {
               href={l.href}
               target="_blank"
               rel="noreferrer"
-              className="group flex h-full flex-col rounded-2xl border border-subtle bg-white/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-diffuse"
+              className="group flex h-full flex-col rounded-2xl border border-subtle bg-paper-dim p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-diffuse"
             >
               <span className="font-mono text-[11px] tracking-widest text-accent-deep">
                 {l.label}
@@ -78,7 +78,7 @@ export function Closing() {
           {TEAM.map((m) => (
             <li
               key={m.name}
-              className="rounded-2xl border border-subtle bg-white/70 p-6"
+              className="rounded-2xl border border-subtle bg-paper-dim p-6"
             >
               <p className="font-mono text-[10px] tracking-widest text-accent-deep">
                 {m.role}
@@ -108,7 +108,7 @@ export function Closing() {
             href="https://www.paypal.me/alaind831"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-subtle bg-white/70 px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
+            className="rounded-lg border border-subtle bg-paper px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
           >
             PayPal 捐赠
           </a>
@@ -116,7 +116,7 @@ export function Closing() {
             href="https://www.venmo.com/adumesny"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-subtle bg-white/70 px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
+            className="rounded-lg border border-subtle bg-paper px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
           >
             Venmo 捐赠
           </a>

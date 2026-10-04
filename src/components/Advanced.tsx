@@ -39,7 +39,7 @@ export function Advanced() {
       <div className="grid min-w-0 gap-3 lg:grid-cols-2">
         {/* 扩展库 */}
         <Reveal>
-          <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+          <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-paper-dim p-6">
             <span className="font-mono text-[11px] tracking-widest text-accent-deep">
               扩展库
             </span>
@@ -58,7 +58,7 @@ export function Advanced() {
         {/* 覆盖选项 + 触摸 */}
         <div className="grid min-w-0 gap-3">
           <Reveal delay={0.06}>
-            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-paper-dim p-6">
               <span className="font-mono text-[11px] tracking-widest text-blue">
                 覆盖选项
               </span>
@@ -75,7 +75,7 @@ export function Advanced() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-white/70 p-6">
+            <article className="flex h-full min-w-0 flex-col rounded-2xl border border-subtle bg-paper-dim p-6">
               <span className="font-mono text-[11px] tracking-widest text-green">
                 触摸设备
               </span>
@@ -126,7 +126,7 @@ export function Advanced() {
 
       {/* 修改网格列数 — full width */}
       <Reveal className="mt-3">
-        <article className="min-w-0 rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8">
+        <article className="min-w-0 rounded-2xl border border-subtle bg-paper-dim p-6 sm:p-8">
           <div className="grid min-w-0 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
               <span className="font-mono text-[11px] tracking-widest text-accent-deep">
@@ -163,7 +163,7 @@ export function Advanced() {
 
       {/* 打印支持 */}
       <Reveal className="mt-3">
-        <article className="grid min-w-0 gap-6 rounded-2xl border border-subtle bg-white/70 p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <article className="grid min-w-0 gap-6 rounded-2xl border border-subtle bg-paper-dim p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <span className="font-mono text-[11px] tracking-widest text-blue">
               打印支持 · v13.1+
@@ -182,12 +182,12 @@ export function Advanced() {
               href="https://github.com/gridstack/gridstack.js/tree/master/print_README.md"
               target="_blank"
               rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-lg border border-subtle px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
+              className="mt-5 inline-flex items-center gap-2 rounded-lg border border-subtle bg-paper px-4 py-2.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent-deep"
             >
               阅读打印指南 ↗
             </a>
           </div>
-          <div className="rounded-xl border border-subtle bg-paper-dim p-5">
+          <div className="rounded-xl border border-subtle bg-paper p-5">
             <p className="font-mono text-[10px] tracking-widest text-mid-dark">
               PrintOptions
             </p>
@@ -195,7 +195,7 @@ export function Advanced() {
               {['pageBreak', 'orientation', 'breakInside'].map((k) => (
                 <li
                   key={k}
-                  className="flex items-center justify-between rounded-md border border-subtle bg-white/70 px-3 py-2"
+                  className="flex items-center justify-between rounded-md border border-subtle bg-paper-dim px-3 py-2"
                 >
                   <span>{k}</span>
                   <span className="text-green">✓</span>
