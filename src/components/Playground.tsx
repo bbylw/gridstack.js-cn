@@ -364,11 +364,18 @@ export function Playground() {
     grid.addWidget(widget(kind, { x: cell.x, y: cell.y, id: uid() }))
   }
 
+  /** Full reset: widgets *and* every toolbar control back to their defaults. */
   const reset = () => {
     const grid = gridRef.current
     if (!grid) return
+    grid.setStatic(false)
     grid.removeAll(true)
+    grid.mode('top')
+    grid.column(12)
     INITIAL.forEach((w) => grid.addWidget({ ...w }))
+    setColumn(12)
+    setMode('top')
+    setLocked(false)
   }
 
   return (

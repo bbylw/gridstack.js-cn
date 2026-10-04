@@ -1,4 +1,10 @@
-import { useId, useState, type ReactNode } from 'react'
+import {
+  useId,
+  useRef,
+  useState,
+  type KeyboardEvent,
+  type ReactNode,
+} from 'react'
 
 export interface TabItem {
   id: string
@@ -14,8 +20,40 @@ interface TabsProps {
 export function Tabs({ items, ariaLabel }: TabsProps) {
   const [active, setActive] = useState(items[0]?.id)
   const baseId = useId()
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({})
 
   if (items.length === 0) return null
+
+  /** ARIA tabs pattern: arrow keys move both selection and focus. */
+  const focusTab = (id: string) => {
+    setActive(id)
+    tabRefs.current[id]?.focus()
+  }
+
+  const onKeyDown = (e: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const last = items.length - 1
+    let next: number
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+        next = index === last ? 0 : index + 1
+        break
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        next = index === 0 ? last : index - 1
+        break
+      case 'Home':
+        next = 0
+        break
+      case 'End':
+        next = last
+        break
+      default:
+        return
+    }
+    e.preventDefault()
+    focusTab(items[next].id)
+  }
 
   return (
     <div>
@@ -24,17 +62,22 @@ export function Tabs({ items, ariaLabel }: TabsProps) {
         aria-label={ariaLabel}
         className="flex flex-wrap gap-1.5 border-b border-subtle pb-px"
       >
-        {items.map((item) => {
+        {items.map((item, i) => {
           const selected = item.id === active
           return (
             <button
               key={item.id}
+              ref={(el) => {
+                tabRefs.current[item.id] = el
+              }}
               id={`${baseId}-tab-${item.id}`}
               role="tab"
               type="button"
               aria-selected={selected}
               aria-controls={`${baseId}-panel-${item.id}`}
+              tabIndex={selected ? 0 : -1}
               onClick={() => setActive(item.id)}
+              onKeyDown={(e) => onKeyDown(e, i)}
               className={`relative rounded-t-md px-3.5 py-2 font-mono text-xs transition-colors duration-200 ${
                 selected
                   ? 'text-ink'

@@ -32,10 +32,7 @@ export function SectionHeading({ eyebrow, title, lead, dark }: HeadingProps) {
   return (
     <Reveal className="mb-12 max-w-3xl md:mb-16">
       <div className="mb-4 flex items-center gap-3">
-        <span
-          className={`h-px w-8 ${dark ? 'bg-accent' : 'bg-accent'}`}
-          aria-hidden="true"
-        />
+        <span className="h-px w-8 bg-accent" aria-hidden="true" />
         <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-accent">
           {eyebrow}
         </span>

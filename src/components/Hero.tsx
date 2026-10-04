@@ -140,11 +140,17 @@ export function Hero() {
       {/* ---- keyword marquee ---- */}
       <div className="relative border-t border-white/10 py-5">
         <div className="mask-fade-x flex overflow-hidden">
-          <div className="animate-marquee flex shrink-0 items-center gap-10 pr-10">
+          {/* the trailing `pr-10` on each item (rather than a gap on the
+              track) makes the two copies exactly equal in width, so the
+              -50% marquee loop is seamless. */}
+          <div
+            aria-hidden="true"
+            className="animate-marquee flex shrink-0 items-center"
+          >
             {[...KEYWORDS, ...KEYWORDS].map((k, i) => (
               <span
                 key={`${k}-${i}`}
-                className="flex shrink-0 items-center gap-10 font-mono text-xs tracking-wide whitespace-nowrap text-mid"
+                className="flex shrink-0 items-center gap-10 pr-10 font-mono text-xs tracking-wide whitespace-nowrap text-mid"
               >
                 {k}
                 <span className="size-1 rounded-full bg-accent/60" />

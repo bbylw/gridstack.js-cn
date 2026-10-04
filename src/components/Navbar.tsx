@@ -146,6 +146,10 @@ export function Navbar() {
 
       {/* mobile drawer */}
       <div
+        // `inert` keeps the collapsed drawer out of the tab order / a11y tree;
+        // without it the invisible links stay keyboard-focusable.
+        inert={!open}
+        aria-hidden={!open}
         className={`overflow-hidden border-b border-white/10 bg-ink text-paper transition-[max-height,opacity] duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}

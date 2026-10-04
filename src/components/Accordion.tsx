@@ -72,6 +72,9 @@ export function Accordion({ items, defaultOpenId }: AccordionProps) {
               id={`${baseId}-panel-${item.id}`}
               role="region"
               aria-labelledby={`${baseId}-trigger-${item.id}`}
+              // the panel stays mounted while collapsed (for the height
+              // transition), so `inert` keeps its buttons/links untabbable
+              inert={!isOpen}
               className="grid overflow-hidden transition-[grid-template-rows] duration-[400ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
